@@ -37,8 +37,12 @@ public class ArtisanServiceImpl implements ArtisanService {
 		// 紧跟在这个方法后的第一个MyBatis 查询方法会被进行分页
 		PageHelper.startPage(pageNum, pageSize).setOrderBy("id desc");
 		List<Artisan> artisanList = artisanMapper.selectAll();
-		// 用PageInfo对结果进行包装
+		
+		// 需要注意的是查询语句必须紧跟这一句，且只能使用一次，意思就是如果还有一个分页查询需要再定义一次PageHelper.startPage(pageNum, pageSize)
+		
+		// 用PageInfo对结果进行包装,返回
 		// PageInfo page = new PageInfo(artisanList);
+		// PageInfo<Artisan> pageInfo = new PageInfo<Artisan>(artisanList);
 
 		
 		final PageInfo<Artisan> pageInfo = PageHelper.startPage(pageNum, pageSize).setOrderBy("id desc")
