@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+                    "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<!-- 当Mapper接口和XML文件关联的时候， namespace的值就需要配置成接口的全限定名称 -->
+<mapper namespace="com.artisan.mapper.ArtisanMapper">
+	<select id="selectAllArtisansByXml" resultType="Artisan"> <!--   resultType可以不用写全，与application.yml中的type-aliases-package属性组合使用 -->
+		select id , name ,sex from artisan
+	</select>
+</mapper>

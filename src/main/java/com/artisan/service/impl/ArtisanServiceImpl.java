@@ -53,4 +53,14 @@ public class ArtisanServiceImpl implements ArtisanService {
 		return artisanList;
 	}
 
+	@Override
+	public List<Artisan> getAllArtisanListByXml() {
+		return artisanMapper.selectAllArtisansByXml();
+	}
+
+	@Override
+	public List<Artisan> getAllArtisanListByAnno() {
+		return artisanMapper.selectAllArtisansByAnno();
+	}
+
 }

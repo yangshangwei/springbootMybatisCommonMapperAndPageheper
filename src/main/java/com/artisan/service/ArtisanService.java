@@ -10,5 +10,6 @@ public interface ArtisanService {
 	
 	List<Artisan> getArtisanListByPage(int pageNum , int pageSize);
 	
-	
+	List<Artisan> getAllArtisanListByXml();
+	List<Artisan> getAllArtisanListByAnno();
 }
