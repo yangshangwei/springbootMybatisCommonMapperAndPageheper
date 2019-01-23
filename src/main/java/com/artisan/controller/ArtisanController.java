@@ -29,7 +29,7 @@ public class ArtisanController {
 		return Result.error(CodeMsg.SERVER_ERROR);
 	}
 
-	// 分页 http://localhost:8080/artisansPage?pageNum=2&pageSize=3
+	// 分页 http://localhost:8089/artisansPage?pageNum=2&pageSize=3
 	@GetMapping("/artisansPage")
 	public Result<List<Artisan>> selectPageArtisan(int pageNum, int pageSize) {
 		return Result.success(artisanService.getArtisanListByPage(pageNum, pageSize));
